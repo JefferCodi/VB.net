@@ -121,7 +121,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
+    <Compile Include="cliente.vb" />
+    <Compile Include="distrito.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <EmbeddedResource Include="My Project\clientes.entidades.rd.xml" />
   </ItemGroup>
