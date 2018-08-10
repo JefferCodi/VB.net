@@ -125,7 +125,7 @@ Public Class DistritoDAO
             End If
         End Try
     End Sub
-    Public Sub insertarDistrto(ByVal listadeCliente As List(Of distrito))
+    Public Sub insertarDistrto(ByVal listadeDistrito As List(Of distrito))
         Dim oComman As New SqlCommand
         Try
             oComman.Connection = MyBase.ObtenerConexion()
@@ -134,7 +134,8 @@ Public Class DistritoDAO
             oComman.Parameters.Add("@nombre", SqlDbType.NChar)
             oComman.Connection.Open()
 
-            For Each x As distrito In listadeCliente
+            For Each x As distrito In listadeDistrito
+
                 oComman.Parameters("@id").Value = capturarIdfinal()
                 oComman.Parameters("@nombre").Value = x.NOMBRE
                 oComman.ExecuteNonQuery()
@@ -171,7 +172,7 @@ Public Class DistritoDAO
             End If
         End Try
     End Function
-    Public Sub insertarDistrito(ByVal oCliente As distrito)
+    Public Sub insertarDistrito(ByVal oDistrito As distrito)
         Dim oComman As New SqlCommand
         Try
             oComman.Connection = MyBase.ObtenerConexion()
@@ -181,7 +182,7 @@ Public Class DistritoDAO
             oComman.Connection.Open()
 
             oComman.Parameters("@id").Value = capturarIdfinal()
-            oComman.Parameters("@nombre").Value = oCliente.NOMBRE
+            oComman.Parameters("@nombre").Value = oDistrito.NOMBRE
 
             oComman.ExecuteNonQuery()
             oComman.Connection.Close()

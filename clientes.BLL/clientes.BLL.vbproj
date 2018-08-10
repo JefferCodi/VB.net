@@ -122,6 +122,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Clientes.vb" />
+    <Compile Include="Distritos.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <EmbeddedResource Include="My Project\clientes.BLL.rd.xml" />
   </ItemGroup>
