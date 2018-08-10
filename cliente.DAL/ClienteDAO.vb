@@ -23,7 +23,6 @@ Public Class ClienteDAO
             Throw New System.AggregateException("No se puedo ejecutar la consuta del cliente", ex)
         End Try
     End Function
-
     Public Function obtenerListatdoClientesPorId(ByVal Id As Char) As List(Of clientetb)
         Dim oComman As New SqlCommand
         Try
@@ -47,8 +46,7 @@ Public Class ClienteDAO
             End If
         End Try
     End Function
-
-    Public Function recuperarListado(ByVal dataReader As SqlDataReader) As List(Of clientetb)
+    Private Function recuperarListado(ByVal dataReader As SqlDataReader) As List(Of clientetb)
         Try
             Dim listadoClientes As New List(Of clientetb)
             While (dataReader.Read)

@@ -47,8 +47,7 @@ Public Class DistritoDAO
             End If
         End Try
     End Function
-
-    Public Function recuperarListado(ByVal dataReader As SqlDataReader) As List(Of distrito)
+    Private Function recuperarListado(ByVal dataReader As SqlDataReader) As List(Of distrito)
         Try
             Dim listadoDistritos As New List(Of distrito)
             While (dataReader.Read)

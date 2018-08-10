@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3A053806-DBD3-44BB-9B11-97B33C238995}</ProjectGuid>
+    <ProjectGuid>{C7961E4C-6441-445C-8918-7E7702CBC6E6}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>cliente.DAL</RootNamespace>
-    <AssemblyName>cliente.DAL</AssemblyName>
+    <RootNamespace>clientes.BLL</RootNamespace>
+    <AssemblyName>clientes.BLL</AssemblyName>
     <DefaultLanguage>es-ES</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
@@ -23,7 +23,7 @@
     <DefineTrace>true</DefineTrace>
     <NoConfig>true</NoConfig>
     <OutputPath>bin\Debug</OutputPath>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
@@ -37,7 +37,7 @@
     <NoConfig>true</NoConfig>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
@@ -52,7 +52,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
@@ -64,7 +64,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
@@ -77,7 +77,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>ARM</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
@@ -89,7 +89,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>ARM</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
@@ -102,7 +102,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
@@ -114,18 +114,16 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DocumentationFile>cliente.DAL.xml</DocumentationFile>
+    <DocumentationFile>clientes.BLL.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="claseBaseDAO.vb" />
-    <Compile Include="DistritoDAO.vb" />
-    <Compile Include="ClienteDAO.vb" />
+    <Compile Include="Clientes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <EmbeddedResource Include="My Project\cliente.DAL.rd.xml" />
+    <EmbeddedResource Include="My Project\clientes.BLL.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -159,16 +157,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.7</Version>
-    </PackageReference>
-    <PackageReference Include="System.Data.SqlClient">
-      <Version>4.5.1</Version>
+      <Version>6.0.6</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\cliente.DAL\cliente.DAL.vbproj">
+      <Project>{3a053806-dbd3-44bb-9b11-97b33c238995}</Project>
+      <Name>cliente.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\clientes.entidades\clientes.entidades.vbproj">
       <Project>{e2ec547d-8e69-46a4-b100-329952c3c72b}</Project>
       <Name>clientes.entidades</Name>
