@@ -1,4 +1,4 @@
-﻿Public Class cliente
+﻿Public Class clientetb
     Private Clie_id As Char
     Private Clie_nomb As String
     Private Clie_pate As String
@@ -64,7 +64,7 @@
             Clie_emai = value
         End Set
     End Property
-    Public Property tb_distrito As List(Of distrito)
+    Public Property DISTRITO As List(Of distrito)
         Get
             Return listaDistrito
         End Get

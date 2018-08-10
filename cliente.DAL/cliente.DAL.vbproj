@@ -122,6 +122,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="claseBaseDAO.vb" />
+    <Compile Include="ClienteDAO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <EmbeddedResource Include="My Project\cliente.DAL.rd.xml" />
   </ItemGroup>
@@ -165,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clientes.entidades\clientes.entidades.vbproj">
+      <Project>{e2ec547d-8e69-46a4-b100-329952c3c72b}</Project>
+      <Name>clientes.entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
